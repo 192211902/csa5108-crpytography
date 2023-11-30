@@ -1,11 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdint.h>
-#include <gmp.h>
-
-void commonModulusAttack(mpz_t c1, mpz_t c2, mpz_t n, mpz_t e, mpz_t result) {
-    mpz_t gcd_result;
-    mpz_init(gcd_result);
 
     // Calculate gcd(c1^e - c2^e, n)
     mpz_powm(result, c1, e, n);
